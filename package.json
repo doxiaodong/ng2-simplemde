@@ -1,0 +1,54 @@
+{
+  "name": "ng2-simplemde",
+  "description": "simplemde-markdown-editor with Angular",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/doxiaodong/ng2-simplemde"
+  },
+  "version": "1.0.0-alpha.0",
+  "license": "MIT",
+  "scripts": {
+    "tslint": "tslint",
+    "lint": "npm run tslint \"src/**/*.ts\" && npm run tslint \"server/**/*.ts\"",
+    "server": "npm run server:dev",
+    "server:dev": "webpack-dev-server --config config/webpack.dev.js --progress --profile --watch",
+    "server:dev:hmr": "npm run server:dev -- --inline --hot",
+    "build": "npm run clean && webpack --config config/webpack.prod.js --progress --profile --bail",
+    "clean": "rm -rf docs",
+    "start": "npm run server:dev:hmr",
+    "ngc": "ngc"
+  },
+  "dependencies": {
+    "simplemde": "^1.11.2"
+  },
+  "devDependencies": {
+    "@angular/common": "^2.4.4",
+    "@angular/compiler": "^2.4.4",
+    "@angular/compiler-cli": "^2.4.4",
+    "@angular/core": "^2.4.4",
+    "@angular/forms": "^2.4.4",
+    "@angular/platform-browser": "^2.4.4",
+    "@angular/platform-browser-dynamic": "^2.4.4",
+    "@angular/router": "^3.4.4",
+    "@types/clipboard": "^1.5.31",
+    "@types/core-js": "^0.9.35",
+    "@types/node": "^7.0.0",
+    "@types/simplemde": "^1.11.5",
+    "@types/webpack": "^2.2.1",
+    "awesome-typescript-loader": "~3.0.0-beta.18",
+    "codelyzer": "2.0.0-beta.4",
+    "core-js": "^2.4.1",
+    "css-loader": "^0.26.1",
+    "html-webpack-plugin": "^2.26.0",
+    "raw-loader": "^0.5.1",
+    "rxjs": "^5.0.3",
+    "style-loader": "^0.13.1",
+    "tslint": "^4.3.1",
+    "typescript": "2.1.5",
+    "typescript-formatter": "^4.0.1",
+    "webpack": "~2.2.0",
+    "webpack-dev-server": "~2.2.0",
+    "webpack-merge": "^2.4.0",
+    "zone.js": "^0.7.6"
+  }
+}

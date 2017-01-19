@@ -5,7 +5,7 @@
     "type": "git",
     "url": "https://github.com/doxiaodong/ng2-simplemde"
   },
-  "version": "1.0.0-beta.0",
+  "version": "1.0.0-beta.1",
   "license": "MIT",
   "scripts": {
     "tslint": "tslint",
@@ -19,6 +19,7 @@
     "ngc": "ngc"
   },
   "dependencies": {
+    "@types/simplemde": "^1.11.5",
     "simplemde": "^1.11.2"
   },
   "devDependencies": {
@@ -30,10 +31,8 @@
     "@angular/platform-browser": "^2.4.4",
     "@angular/platform-browser-dynamic": "^2.4.4",
     "@angular/router": "^3.4.4",
-    "@types/clipboard": "^1.5.31",
     "@types/core-js": "^0.9.35",
     "@types/node": "^7.0.0",
-    "@types/simplemde": "^1.11.5",
     "@types/webpack": "^2.2.1",
     "awesome-typescript-loader": "~3.0.0-beta.18",
     "codelyzer": "2.0.0-beta.4",

@@ -14,10 +14,14 @@
 
 ```typescript
 import { NgModule } from '@angular/core'
-import { SimplemdeModule } from 'ng2-simplemde'
+import { SimplemdeModule, SIMPLEMDE_CONFIG } from 'ng2-simplemde'
 @NgModule({
   imports: [
-    SimplemdeModule.forRoot()
+    SimplemdeModule.forRoot({
+      provide: SIMPLEMDE_CONFIG,
+      // config options 1
+      useValue: $options1
+    })
   ],
   bootstrap: [AppComponent]
 })
@@ -25,5 +29,9 @@ export class AppModule { }
 ```
 
 ```html
-<simplemde [(ngModel)]="value"></simplemde>
+<!-- config options 2 -->
+<simplemde [(ngModel)]="value" [options]="$options2"></simplemde>
 ```
+
+> 1. The final options is `Object.assign({}, $options2, $options1)`
+> 2. The `element` option is not useful

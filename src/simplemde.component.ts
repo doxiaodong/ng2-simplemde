@@ -5,6 +5,7 @@ import {
   ElementRef,
   ViewChild,
   AfterViewInit,
+  Input,
   OnDestroy,
   ModuleWithProviders,
   Inject
@@ -38,6 +39,7 @@ const SIMPLEMDE_CONTROL_VALUE_ACCESSOR: any = {
 })
 export class Simplemde extends NgModelBase implements AfterViewInit, OnDestroy {
   @ViewChild('simplemde') textarea: ElementRef
+  @Input() options: SimpleMDE.Options = {}
 
   private simplemde: SimpleMDE
 
@@ -51,11 +53,11 @@ export class Simplemde extends NgModelBase implements AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit() {
-    if (typeof this.config !== 'object') {
+    if (typeof this.config !== 'object' || typeof this.options !== 'object') {
       throw 'config is not an object'
     }
-    // copy
-    const config = Object.assign({}, this.config)
+
+    const config = Object.assign({}, this.config, this.options)
     config.element = this.textarea.nativeElement
 
     this.simplemde = new SimpleMDE(config)

@@ -17,6 +17,7 @@ import { CommonModule } from '@angular/common'
 import { FormsModule } from '@angular/forms'
 import { NgModelBase } from './utils'
 import { SIMPLEMDE_CONFIG } from './config'
+import { assign } from './assign'
 
 // use local style
 import 'simplemde/dist/simplemde.min.css'
@@ -57,7 +58,7 @@ export class Simplemde extends NgModelBase implements AfterViewInit, OnDestroy {
       throw 'config is not an object'
     }
 
-    const config = Object.assign({}, this.config, this.options)
+    const config = assign({}, this.config, this.options)
     config.element = this.textarea.nativeElement
 
     this.simplemde = new SimpleMDE(config)

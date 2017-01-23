@@ -17,7 +17,7 @@ import { CommonModule } from '@angular/common'
 import { FormsModule } from '@angular/forms'
 import { NgModelBase } from './utils'
 import { SIMPLEMDE_CONFIG } from './config'
-import { assign } from './assign'
+import assign from './assign'
 
 // use local style
 import 'simplemde/dist/simplemde.min.css'

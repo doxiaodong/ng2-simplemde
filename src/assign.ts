@@ -1,5 +1,7 @@
+let assign = Object.assign
+
 if (typeof Object.assign !== 'function') {
-  Object.assign = function (target, varArgs) {
+  assign = function(target, varArgs) {
     if (target == null) { // TypeError if undefined or null
       throw new TypeError('Cannot convert undefined or null to object')
     }
@@ -22,4 +24,4 @@ if (typeof Object.assign !== 'function') {
   }
 }
 
-export const assign = Object.assign
+export default assign

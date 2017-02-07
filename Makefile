@@ -18,4 +18,5 @@ build:
 publish:
 	npm run ngc
 	tsc -d
+	npm run umd
 	npm publish --registry http://registry.npmjs.org

@@ -1,9 +1,7 @@
 const path = require('path')
-const commonConfig = require('./webpack.common.js')
-const webpackMerge = require('webpack-merge')
 const webpack = require('webpack')
 
-const ENV = 'build'
+const ENV = 'umd'
 
 module.exports = {
   devtool: '#inline-source-map',
@@ -11,7 +9,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, '../bundles'),
     publicPath: '/',
-    filename: 'index.umd.js',
+    filename: 'ng2-simplemde.umd.min.js',
     libraryTarget: 'umd',
     library: 'ng2-simplemde'
   },
@@ -32,6 +30,18 @@ module.exports = {
       // The (\\|\/) piece accounts for path separators in *nix and Windows
       /angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
       path.join(__dirname, './src')
-    )
+    ),
+    new webpack.optimize.UglifyJsPlugin({
+      sourceMap: true,
+      beautify: false,
+
+      mangle: {
+        screw_ie8: true
+      },
+      compress: {
+        screw_ie8: true
+      },
+      comments: false
+    })
   ]
 }

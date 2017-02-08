@@ -5,6 +5,7 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "sourceMap": true,
+    "noUnusedLocals": true,
     "moduleResolution": "node",
     "baseUrl": "./src",
     "paths": {},

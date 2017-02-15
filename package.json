@@ -5,7 +5,7 @@
     "type": "git",
     "url": "https://github.com/doxiaodong/ng2-simplemde"
   },
-  "version": "1.0.0-rc.1",
+  "version": "1.0.0",
   "license": "MIT",
   "main": "bundles/ng2-simplemde.umd.min.js",
   "module": "index.js",

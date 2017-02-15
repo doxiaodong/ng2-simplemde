@@ -18,10 +18,10 @@ import { FormsModule } from '@angular/forms'
 import { NgModelBase } from './utils'
 import { SIMPLEMDE_CONFIG } from './config'
 import assign from './assign'
+import * as SimpleMDE from 'simplemde'
 
 // use local style
 import 'simplemde/dist/simplemde.min.css'
-const SimpleMDE = require('simplemde')
 
 const SIMPLEMDE_CONTROL_VALUE_ACCESSOR: any = {
   provide: NG_VALUE_ACCESSOR,

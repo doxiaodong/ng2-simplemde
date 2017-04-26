@@ -9,6 +9,10 @@
     "moduleResolution": "node",
     "baseUrl": "./src",
     "paths": {},
+    "lib": [
+      "es2015",
+      "dom"
+    ],
     "types": [
       "core-js",
       "node",

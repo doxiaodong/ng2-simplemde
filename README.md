@@ -33,5 +33,5 @@ export class AppModule { }
 <simplemde [(ngModel)]="value" [options]="$options2"></simplemde>
 ```
 
-> 1. The final options is `Object.assign({}, $options2, $options1)`
+> 1. The final options is `{...$options1, ...$options2}`, `Object.assign({}, $options1, $options2)`
 > 2. The `element` option is not useful

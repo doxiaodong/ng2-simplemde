@@ -35,3 +35,16 @@ export class AppModule { }
 
 > 1. The final options is `{...$options1, ...$options2}`, `Object.assign({}, $options1, $options2)`
 > 2. The `element` option is not useful
+
+# Style
+
+* normal, it use `import 'simplemde/dist/simplemde.min.css'`
+* you can use a cdn
+```
+import { SimplemdeModule, SIMPLEMDE_CONFIG } from 'ng2-simplemde/no-style'
+```
+and in index.html
+
+```
+<link href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css" rel="stylesheet">
+```

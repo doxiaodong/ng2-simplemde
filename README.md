@@ -48,3 +48,4 @@ and in index.html
 ```
 <link href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css" rel="stylesheet">
 ```
+* Bundles use don't support this

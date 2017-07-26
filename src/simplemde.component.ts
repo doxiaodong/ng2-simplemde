@@ -32,7 +32,8 @@ const SIMPLEMDE_CONTROL_VALUE_ACCESSOR: any = {
   `,
   providers: [
     SIMPLEMDE_CONTROL_VALUE_ACCESSOR
-  ]
+  ],
+  styleUrls: ['simplemde/dist/simplemde.min.css']
 })
 export class Simplemde extends NgModelBase implements AfterViewInit, OnDestroy {
   @ViewChild('simplemde') textarea: ElementRef

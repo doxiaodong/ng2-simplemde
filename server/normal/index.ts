@@ -5,13 +5,11 @@ import {
 } from '@angular/core'
 
 @Component({
-  selector: 'simplemde-app',
+  selector: 'normal',
   encapsulation: ViewEncapsulation.None,
-  template: require('./app.html')
+  template: require('./index.html')
 })
-export class AppComponent implements OnInit {
-
-  value = '11111'
+export class Normal implements OnInit {
 
   ngOnInit() { }
 }

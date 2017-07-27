@@ -3,16 +3,13 @@ import {
   ModuleWithProviders
 } from '@angular/core'
 import { CommonModule } from '@angular/common'
-import { SimplemdeModule } from '../../src'
 
 @NgModule({
   imports: [
-    CommonModule,
-    SimplemdeModule
+    CommonModule
   ],
   exports: [
-    CommonModule,
-    SimplemdeModule
+    CommonModule
   ]
 })
 export class ShareModule {

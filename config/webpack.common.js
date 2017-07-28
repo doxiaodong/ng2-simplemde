@@ -22,7 +22,7 @@ function webpackConfig() {
         { test: /\.ts$/, use: 'awesome-typescript-loader', exclude: [/\.(spec|e2e)\.ts$/] },
         // See: https://github.com/webpack/raw-loader
         { test: /\.html$/, use: 'raw-loader', exclude: [path.resolve(__dirname, 'server/index.html')] },
-        { test: /\.css$/, use: ['style-loader', 'css-loader'] }
+        { test: /\.css$/, use: 'raw-loader' }
       ]
     },
 

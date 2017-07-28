@@ -8,7 +8,8 @@ import {
   Input,
   OnDestroy,
   ModuleWithProviders,
-  Inject
+  Inject,
+  ViewEncapsulation
 } from '@angular/core'
 import {
   NG_VALUE_ACCESSOR
@@ -27,13 +28,14 @@ const SIMPLEMDE_CONTROL_VALUE_ACCESSOR: any = {
 
 @Component({
   selector: 'simplemde',
+  encapsulation: ViewEncapsulation.None,
   template: `
     <textarea #simplemde></textarea>
   `,
   providers: [
     SIMPLEMDE_CONTROL_VALUE_ACCESSOR
   ],
-  styleUrls: ['simplemde/dist/simplemde.min.css']
+  styleUrls: ['../node_modules/simplemde/dist/simplemde.min.css']
 })
 export class Simplemde extends NgModelBase implements AfterViewInit, OnDestroy {
   @ViewChild('simplemde') textarea: ElementRef

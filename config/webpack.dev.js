@@ -1,7 +1,7 @@
 const path = require('path')
-const commonConfig = require('./webpack.common.js')
 const webpackMerge = require('webpack-merge')
 const webpack = require('webpack')
+const commonConfig = require('./webpack.common')
 
 const ENV = 'dev'
 

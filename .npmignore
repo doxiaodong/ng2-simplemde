@@ -2,18 +2,11 @@
 
 .vscode/
 
-node_modules/
-npm-debug.log
-!bundles/
-
-dist/
-docs/
-
-*.ts
-!*.d.ts
 config/
-scripts/
+docs/
+no-style/
+node_modules/
 server/
-Makefile
 
-!*.metadata.json
+.travis.yml
+package-lock.json

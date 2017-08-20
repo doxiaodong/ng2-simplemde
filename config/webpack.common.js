@@ -18,8 +18,7 @@ function webpackConfig() {
 
     module: {
       rules: [
-        // See: https://github.com/s-panferov/awesome-typescript-loader
-        { test: /\.ts$/, use: 'awesome-typescript-loader', exclude: [/\.(spec|e2e)\.ts$/] },
+        { test: /\.ts$/, use: 'ts-loader', exclude: [/\.(spec|e2e)\.ts$/] },
         // See: https://github.com/webpack/raw-loader
         { test: /\.html$/, use: 'raw-loader', exclude: [path.resolve(__dirname, 'server/index.html')] },
         { test: /\.css$/, use: ['style-loader', 'css-loader'] }
@@ -47,8 +46,7 @@ function webpackConfig() {
       }),
 
       new webpack.ContextReplacementPlugin(
-        // The (\\|\/) piece accounts for path separators in *nix and Windows
-        /angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
+        /angular(\\|\/)core(\\|\/)@angular/,
         path.join(__dirname, './src')
       )
     ],

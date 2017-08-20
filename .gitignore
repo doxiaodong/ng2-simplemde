@@ -1,20 +1,7 @@
 .DS_Store
 
-node_modules/
-npm-debug.log
 bundles/
+lib/
+node_modules/
 
-dist/
-
-upload.sh
-
-*.js
-!config/**/*.js
-!docs/**/*.js
-*.d.ts
-*.js.map
-!docs/**/*.js.map
-
-docs/CNAME
-
-*.metadata.json
+/no-style.*

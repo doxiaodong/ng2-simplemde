@@ -20,8 +20,12 @@
     "object-literal-sort-keys": false,
     "member-ordering": [
       true,
-      "static-before-instance",
-      "variables-before-functions"
+      {
+        "order": [
+          "static-field",
+          "instance-field"
+        ]
+      }
     ],
     "no-console": [
       true,
@@ -64,7 +68,6 @@
     "no-string-literal": false,
     "no-switch-case-fall-through": true,
     "no-unused-expression": true,
-    "no-use-before-declare": true,
     "no-var-keyword": true,
     "no-var-requires": false,
     "radix": true,

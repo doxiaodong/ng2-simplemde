@@ -1,12 +1,13 @@
 language: node_js
 
-node_js: "6"
+node_js: "8"
 
 install:
-  - npm install
+  - npm i --registry https://registry.npmjs.org
 
 cache:
   directories:
     - $TRAVIS_BUILD_DIR/node_modules
 
-script: $TRAVIS_BUILD_DIR/scripts/.travis.sh
+script:
+  - npm run ci

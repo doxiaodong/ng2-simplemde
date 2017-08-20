@@ -19,7 +19,7 @@
     "server:dev:hmr": "npm run server:dev -- --inline --hot",
     "build": "webpack --config config/webpack.prod.js --progress --profile --bail",
     "umd": "webpack --config config/webpack.umd.js --progress --profile --bail",
-    "clean": "rm -rf lib & rm -rf docs & rm -rf bundles & rm no-style.*",
+    "clean": "rm -rf lib & rm -rf docs & rm -rf bundles",
     "start": "npm run server:dev:hmr",
     "ngc": "ngc",
     "ci": "npm run clean && npm run lint && npm run build && tsc -d && npm run umd",

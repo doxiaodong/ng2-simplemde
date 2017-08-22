@@ -4,7 +4,6 @@
 
 config/
 docs/
-no-style/
 node_modules/
 server/
 

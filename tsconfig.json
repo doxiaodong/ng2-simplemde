@@ -23,8 +23,7 @@
   "exclude": [
     "node_modules",
     "server",
-    "no-style",
-    "no-style.d.ts"
+    "no-style"
   ],
   "angularCompilerOptions": {
     "strictMetadataEmit": true,

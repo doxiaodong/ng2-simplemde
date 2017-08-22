@@ -23,7 +23,7 @@
     "start": "npm run server:dev:hmr",
     "ngc": "ngc",
     "ci": "npm run clean && npm run lint && npm run build && tsc -d && npm run umd",
-    "prepub": "npm run ci && cp no-style/* .",
+    "prepub": "npm run ci",
     "pub": "npm publish --registry http://registry.npmjs.org"
   },
   "dependencies": {

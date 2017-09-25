@@ -39,12 +39,16 @@ export class Simplemde extends NgModelBase implements AfterViewInit, OnDestroy {
   @Input() options: SimpleMDE.Options = {}
 
   private simplemde: SimpleMDE
+  private tmpValue = null
 
   writeValue(v: any) {
     if (v !== this._innerValue) {
       this._innerValue = v
-      if (this.value != null) {
+      if (this.simplemde && this.value != null) {
         this.simplemde.value(this.value)
+      }
+      if (!this.simplemde) {
+        this.tmpValue = this.value
       }
     }
   }
@@ -58,6 +62,11 @@ export class Simplemde extends NgModelBase implements AfterViewInit, OnDestroy {
     config.element = this.textarea.nativeElement
 
     this.simplemde = new SimpleMDE(config)
+
+    if (this.tmpValue) {
+      this.simplemde.value(this.tmpValue)
+      this.tmpValue = null
+    }
 
     this.simplemde.codemirror.on('change', () => {
       this.value = this.simplemde.value()

@@ -1,3 +1,6 @@
 value: {{ value }}
 <simplemde [(ngModel)]="value"></simplemde>
 <simplemde [(ngModel)]="value" [options]="{ placeholder: '111' }"></simplemde>
+<form [formGroup]="form">
+  <simplemde formControlName="key" [(ngModel)]="value"></simplemde>
+</form>

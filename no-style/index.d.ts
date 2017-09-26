@@ -1,1 +1,1 @@
-export * from './lib/no-style';
+export * from '../lib/no-style';

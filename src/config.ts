@@ -1,3 +1,3 @@
-import { OpaqueToken } from '@angular/core'
+import { InjectionToken } from '@angular/core'
 
-export let SIMPLEMDE_CONFIG = new OpaqueToken('simplemde.config')
+export let SIMPLEMDE_CONFIG = new InjectionToken('simplemde.config')

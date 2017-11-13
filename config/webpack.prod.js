@@ -1,7 +1,7 @@
 const path = require('path')
 const webpackMerge = require('webpack-merge')
 const webpack = require('webpack')
-const BabiliPlugin = require('babili-webpack-plugin')
+const MinifyPlugin = require('babel-minify-webpack-plugin')
 const commonConfig = require('./webpack.common')
 
 const ENV = 'prod'
@@ -21,6 +21,6 @@ module.exports = webpackMerge(commonConfig, {
         'ENV': JSON.stringify(ENV)
       }
     }),
-    new BabiliPlugin()
+    new MinifyPlugin()
   ]
 })

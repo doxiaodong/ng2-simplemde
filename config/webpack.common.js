@@ -46,7 +46,7 @@ function webpackConfig() {
       }),
 
       new webpack.ContextReplacementPlugin(
-        /angular(\\|\/)core(\\|\/)@angular/,
+        /(.+)?angular(\\|\/)core(.+)?/,
         path.join(__dirname, './src')
       )
     ],

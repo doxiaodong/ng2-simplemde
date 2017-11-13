@@ -1,6 +1,6 @@
 const path = require('path')
 const webpack = require('webpack')
-const BabiliPlugin = require('babili-webpack-plugin')
+const MinifyPlugin = require('babel-minify-webpack-plugin')
 
 const ENV = 'umd'
 
@@ -29,6 +29,6 @@ module.exports = {
     ]
   },
   plugins: [
-    new BabiliPlugin()
+    new MinifyPlugin()
   ]
 }

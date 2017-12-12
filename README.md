@@ -36,6 +36,11 @@ export class AppModule { }
 > 1. The final options is `{...$options1, ...$options2}`, `Object.assign({}, $options1, $options2)`
 > 2. The `element` option is not useful
 
+# Webpack
+
+* you should add `style-loader!css-loader` in your webpack config
+* If you use angular-cli, you can add `style-loader!css-loader` as pug-loader in https://github.com/angular/angular-cli/issues/1886.
+
 # Style
 
 * normal, it use `import 'simplemde/dist/simplemde.min.css'`

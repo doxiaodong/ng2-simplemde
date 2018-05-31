@@ -5,7 +5,7 @@
     "type": "git",
     "url": "https://github.com/doxiaodong/ng2-simplemde"
   },
-  "version": "2.0.1",
+  "version": "2.0.2",
   "license": "MIT",
   "main": "bundles/ng2-simplemde.umd.min.js",
   "module": "lib/index.js",
@@ -31,9 +31,9 @@
     "simplemde": "^1.11.2"
   },
   "peerDependencies": {
-    "@angular/common": "^5.0.0",
-    "@angular/core": "^5.0.0",
-    "@angular/forms": "^5.0.0"
+    "@angular/common": ">=5.0.0",
+    "@angular/core": ">=5.0.0",
+    "@angular/forms": ">=5.0.0"
   },
   "devDependencies": {
     "@angular/common": "^5.0.1",

@@ -30,11 +30,12 @@ export class AppModule { }
 
 ```html
 <!-- config options 2 -->
-<simplemde [(ngModel)]="value" [options]="$options2"></simplemde>
+<simplemde [(ngModel)]="value" [options]="$options2" [codemirror]="{ lineNumbers: true }"></simplemde>
 ```
 
 > 1. The final options is `{...$options1, ...$options2}`, `Object.assign({}, $options1, $options2)`
 > 2. The `element` option is not useful
+> 3. `codemirror` is option set for codemirror, see https://github.com/codemirror/CodeMirror
 
 # Webpack
 
